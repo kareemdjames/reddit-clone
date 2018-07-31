@@ -21,9 +21,12 @@ handleChange= (e) => {
 handleSubmit = (e) => {
     e.preventDefault();
     
-    this.props.firebaseRef.push({
-        title: this.state.title
+    this.props.firebase.ref('posts').push({
+        title: this.state.title,
+        upvote: 0,
+        downvote: 0
     });
+    
     this.setState({
         title:''
     });

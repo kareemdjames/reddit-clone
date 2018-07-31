@@ -30,7 +30,8 @@ class App extends Component {
       <div className="App">
         Hello World
         {this.props.children && React.cloneElement(this.props.children, {
-            firebaseRef: firebase.database().ref('posts'),
+            // firebaseRef: firebase.database().ref('posts'), updated to implement voting
+            firebase: firebase.database(),
             posts: this.state.posts,
             loading: this.state.loading
           })}
