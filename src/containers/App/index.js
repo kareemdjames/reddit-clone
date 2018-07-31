@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import  database from './Firebase';
 
 class App extends Component {
   render() {
