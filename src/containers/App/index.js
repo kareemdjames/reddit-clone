@@ -8,7 +8,7 @@ class App extends Component {
 
   state = {
     posts: [],
-    loading: false
+    loading: true
   }
 
   componentWillMount() {
@@ -25,18 +25,15 @@ class App extends Component {
     });
   }
   
-  
   render() {
     return (
       <div className="App">
-        <h1>Hello World</h1>
-        {this.props.children && React.cloneElement(
-          this.props.children, {
+        Hello World
+        {this.props.children && React.cloneElement(this.props.children, {
             firebaseRef: firebase.database().ref('posts'),
             posts: this.state.posts,
             loading: this.state.loading
-          }
-        )}
+          })}
       </div>
     );
   }
