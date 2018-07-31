@@ -1,4 +1,4 @@
-import Firebase from 'firebase';
+import firebase from 'firebase';
 
 const config = {
   apiKey: "AIzaSyBMltdAJA3FqXm6Ez5PqJxe44wVUm08mHM",
@@ -8,9 +8,9 @@ const config = {
   storageBucket: "reddit-clone-5e2cf.appspot.com",
   messagingSenderId: "116806682901"
   };
-  
 
-  Firebase.initializeApp(config);
+  firebase.initializeApp(config);
 
-export default Firebase;
-export const database = Firebase.database();
+export default firebase;
+
+export const database = firebase.database();
