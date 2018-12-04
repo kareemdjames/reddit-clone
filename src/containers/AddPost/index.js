@@ -53,4 +53,3 @@ handleSubmit = (e) => {
 }
 
 export default AddPost;
-//
